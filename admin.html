@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Área Administrativa | ONG </title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+<script defer src="js/menu.js"></script>
+<script defer src="js/admin.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">ONG</div>
+        <button id="menu-btn" class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+        <ul id="menu" class="menu">
+          <li><a href="index.html" class="active">Início</a></li>
+          <li>
+            <a href="projetos.html">Projetos</a>
+            <ul class="submenu">
+              <li><a href="#educacao">Educação</a></li>
+              <li><a href="#cultura">Cultura</a></li>
+            </ul>
+          </li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+   
+  <main class="container" id="main-content">
+    <h1>Área Administrativa</h1>
+
+    <section id="login-section">
+      <h2>Login do Administrador</h2>
+      <form id="loginForm">
+        <label for="usuario">Usuário</label>
+        <input id="usuario" name="usuario" type="text" required placeholder="admin">
+
+        <label for="senha">Senha</label>
+        <input id="senha" name="senha" type="password" required placeholder="••••••••">
+
+        <button type="submit">Entrar</button>
+      </form>
+      <p id="loginMsg" style="margin-top:1rem;color:#555"></p>
+    </section>
+
+    <section id="cadastros-section" style="display:none;">
+      <h2>Cadastros Recebidos</h2>
+      <table id="tabelaCadastros" border="1" cellpadding="6" style="border-collapse:collapse;width:100%;background:#fff;">
+        <thead>
+          <tr style="background:#0a4b6b;color:#fff;">
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Interesse</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Linhas geradas via JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 ONG  — Painel Administrativo</p>
+    </div>
+  </footer>
+</body>
+</html>

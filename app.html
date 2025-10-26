@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ONG  — Aplicação Interativa</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="js/menu.js"></script>
+  <script defer src="js/spa.js"></script>
+  <script defer src="js/masks.js"></script>
+  <script defer src="js/topo.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">ONG </div>
+        <button id="menu-btn" class="menu-btn" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul id="menu" class="menu">
+          <li><a href="#home" class="active">Início</a></li>
+          <li>
+            <a href="#projetos">Projetos</a>
+            <ul class="submenu">
+              <li><a href="#projetos">Educação</a></li>
+              <li><a href="#projetos">Cultura</a></li>
+            </ul>
+          </li>
+          <li><a href="#cadastro">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container" id="app">
+    <p>Carregando conteúdo...</p>
+  </main>
+  <footer>
+    <div class="container">
+      <p>© 2025 ONG  — Transparência e Impacto Social</p>
+    </div>
+  </footer>
+  <button id="btnTopo" title="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></button>
+</body>
+</html>

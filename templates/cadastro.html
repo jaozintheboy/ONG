@@ -1,0 +1,33 @@
+<section>
+  <h1>Cadastro</h1>
+  <form id='cadastroForm' novalidate>
+    <label for='nome'>Nome completo</label>
+    <input id='nome' name='nome' required minlength='3'>
+    <label for='email'>E-mail</label>
+    <input id='email' name='email' type='email' required>
+    <label for='cpf'>CPF</label>
+    <input id='cpf' name='cpf' required>
+    <label for='telefone'>Telefone</label>
+    <input id='telefone' name='telefone' required>
+    <label for='interesse'>Interesse</label>
+    <select id='interesse' name='interesse' required><option value=''>Selecione</option><option value='voluntariado'>Voluntariado</option><option value='doacao'>Doação</option></select>
+    <button type='submit'>Enviar</button>
+  </form>
+  <div id='mensagem'></div>
+  <script>
+    document.getElementById('cadastroForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const form = e.target;
+      const msg = document.getElementById('mensagem');
+      msg.innerHTML = '';
+      let valido = true;
+      form.querySelectorAll('input, select').forEach(el => {
+        if (!el.checkValidity()) { el.style.borderColor='red'; valido=false; } else el.style.borderColor='#ccc';
+      });
+      if (!valido) { msg.innerHTML='<div class="alert error">⚠️ Corrija os campos destacados.</div>'; return; }
+      const dados = { nome: form.nome.value, email: form.email.value, interesse: form.interesse.value };
+      localStorage.setItem('ultimoCadastro', JSON.stringify(dados));
+      msg.innerHTML='<div class="alert success">✅ Cadastro enviado!</div>'; form.reset();
+    });
+  </script>
+</section>
