@@ -28,9 +28,55 @@ WCAG 2.1 AA (acessibilidade)
 ✅ Armazenamento local (simulação de backend)
 ✅ Sistema de design modular com variáveis CSS
 ✅ Acessibilidade total por teclado e leitores de tela
-## 🚀 Acesso Online
-🔗 **[Clique aqui para acessar o site](https://jaozintheboy.github.io/ONG/)**
 
----
+🧩 Estrutura de Diretórios
+ong-exemplo/
+├── app.html
+├── css/
+│   └── base.min.css
+├── js/
+│   ├── spa.min.js
+│   ├── menu.js
+│   ├── topo.js
+│   ├── masks.js
+├── templates/
+│   ├── home.html
+│   ├── projetos.html
+│   └── cadastro.html
+└── images/
+
+🧩 Versionamento e GitFlow
+
+O projeto segue o fluxo GitFlow:
+
+main → develop → feature/* → release/* → hotfix/*
+
+
+Commits usam padrão semântico (conforme Conventional Commits).
+
+♿ Acessibilidade
+
+Conforme diretrizes WCAG 2.1 Nível AA:
+
+Navegação completa por teclado
+
+Suporte a leitores de tela (aria-label, role)
+
+Contraste mínimo 4.5:1
+
+Modo escuro e alto contraste
+
+⚙️ Otimização
+
+CSS, JS e HTML minificados
+
+Imagens comprimidas
+
+Lazy loading e cache local
+
+🌍 Deploy
+
+Projeto publicado via GitHub Pages
+🔗 https://jaozintheboy.github.io/ONG/
 
 © 2025 João Pedro Seixas — Projeto acadêmico.
