@@ -107,7 +107,10 @@ header .container, footer .container, main.container {
 .menu a.active::after {
   width: 100%;
 }
-
+a:focus, button:focus, input:focus {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 3px;
+}
 /* Submenu dropdown */
 .submenu {
   display: none;
@@ -323,5 +326,9 @@ footer {
   .card, form {
     background-color: #1e1e1e;
     border-color: #333;
+  }
+  .alto-contraste {
+  background: #000 !important;
+  color: #fff !important;
   }
 }

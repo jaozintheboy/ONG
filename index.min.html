@@ -4,23 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ONG  — Aplicação Interativa</title>
-  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/base.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script defer src="js/menu.js"></script>
-  <script defer src="js/spa.js"></script>
+  <script defer src="js/spa.min.js"></script>
   <script defer src="js/masks.js"></script>
   <script defer src="js/topo.js"></script>
 </head>
 <body>
   <header>
     <div class="container">
-      <nav class="navbar">
+      <nav role="navigation">
         <div class="logo">ONG </div>
-        <button id="menu-btn" class="menu-btn" aria-label="Abrir menu">
+        <button id="menu-btn" class="menu-btn" aria-label="Menu pricipal" class="menu-pricipal">
           <i class="fa-solid fa-bars"></i>
         </button>
+        <button id="contrasteBtn" aria-label="Ativar alto contraste">Alto Contraste</button>
         <ul id="menu" class="menu">
-          <li><a href="#home" class="active">Início</a></li>
+          <li><a href="#home" aria-current="page">Início</a></li>
           <li>
             <a href="#projetos">Projetos</a>
             <ul class="submenu">
@@ -33,6 +34,15 @@
       </nav>
     </div>
   </header>
+  <script>
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        links.forEach(l => l.removeAttribute('aria-current'));
+        link.setAttribute('aria-current', 'page');
+      });
+    });
+  </script>
   <main class="container" id="app">
     <p>Carregando conteúdo...</p>
   </main>
